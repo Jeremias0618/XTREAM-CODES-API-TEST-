@@ -1,0 +1,113 @@
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  background: #000000;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+}
+.form-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.form-container input {
+  margin: 5px;
+  padding: 10px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+}
+.form-container button {
+  padding: 10px 20px;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.form-container button:hover {
+  background-color: #1c7cd6;
+}
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  max-width: 1000px;
+}
+.movie-card {
+  background: #bd1744;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+.pagination button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background: #1e90ff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.modal-bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal {
+  position: relative;
+  width: 90%;
+  max-width: 960px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.close-btn {
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  background: #ff4444;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.movie-title {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+#search {
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+}

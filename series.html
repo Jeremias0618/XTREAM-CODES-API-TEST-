@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>XTREAM SERIES PLAYER</title>
+  <link rel="icon" href="images/icon.png" type="image/png">
+  <link rel="stylesheet" href="css/series.css">
+  <script src="https://cdn.jwplayer.com/libraries/IDzF9Zmk.js"></script>
+</head>
+<body>
+  <a href="index.html">
+    <img src="images/logo.png" alt="Logo" style="max-width: 400px; margin-bottom: 40px;">
+  </a>
+
+  <div class="form-container">
+    <input id="ip" placeholder="IP">
+    <input id="user" placeholder="Usuario">
+    <input id="pass" placeholder="Clave">
+    <button onclick="loadSeries()">Load Series</button> 
+  </div> 
+  
+  <div class="search-container"> 
+  <input id="search" placeholder="Search for series..." oninput="filterSeries()"> 
+  </div> 
+  <div class="pagination"> 
+  <button onclick="prevPage()">Previous</button> 
+  <button onclick="nextPage()">Next</button>
+  </div>
+
+  <div id="seriesContainer" class="series-grid"></div>
+  <div id="episodesContainer" class="episodes-list"></div>
+  <div id="player"></div>
+  <video id="nativePlayer" controls></video>
+
+  <div id="overlay" class="overlay hidden">
+    <div class="episode-btn-container">
+      <div id="episodeList" class="episode-btn-container"></div>
+    </div>
+  </div>
+
+  <script src="js/series.js"></script>
+</body>
+</html>

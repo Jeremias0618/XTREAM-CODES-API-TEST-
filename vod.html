@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>XTREAM VOD PLAYER</title>
+  <link rel="icon" href="images/icon.png" type="image/png">
+  <link rel="stylesheet" href="css/VOD.css">
+  <script src="https://cdn.jwplayer.com/libraries/IDzF9Zmk.js"></script>
+</head>
+<body>
+  <a href="index.html">
+    <img src="images/logo.png" alt="Logo" style="max-width: 400px; margin-bottom: 20px;">
+  </a>
+
+  <div class="form-container"> 
+    <input id="ip" placeholder="IP"> 
+    <input id="user" placeholder="User"> 
+    <input id="pass" placeholder="Key"> 
+    <button onclick="loadMovies()">Load Movies</button> 
+    </div> 
+    
+    <input id="search" placeholder="Search Movie..." oninput="filterMovies()"> 
+    <div id="movieContainer" class="movie-grid"></div> 
+    <div class="pagination"> 
+    <button onclick="prevPage()">Previous</button> 
+    <button onclick="nextPage()">Next</button>
+  </div>
+
+  <div id="modalBg" class="modal-bg">
+    <div class="modal">
+      <div class="close-btn" onclick="closeModal()">✖</div>
+      <div id="movieTitle" class="movie-title"></div>
+      <div id="player"></div>
+    </div>
+  </div>
+
+  <script src="js/VOD.js"></script>
+</body>
+</html>
