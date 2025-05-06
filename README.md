@@ -14,7 +14,7 @@ Web application designed to interact directly with **Xtream Codes / XUI One** se
 
 ✅ Temporary credential storage (10-minute local cache)
 
-✅ Paginated navigation and dynamic search by name
+✅ Paginated navigation and dynamic search by **[Yeremi T](https://github.com/Jeremias0618)**
 
 ✅ Custom player:
 - 🎦 **JW Player** for `.mp4`
