@@ -10,10 +10,10 @@ if (savedKey && Date.now() < parseInt(expiresAt)) {
 
 function saveApiKey() {
   const key = document.getElementById('apiKeyInput').value.trim();
-  if (!key) return alert("Debes ingresar una API key");
+  if (!key) return alert("You must enter an API KEY");
   localStorage.setItem(apiKeyKey, key);
   localStorage.setItem(keyExpirationKey, Date.now() + 3 * 60 * 60 * 1000);
-  alert("API Key guardada por 3 horas");
+  alert("API KEY saved for 3 hours");
 }
 
 async function searchTMDB() {
@@ -28,7 +28,7 @@ async function searchTMDB() {
   resultsDiv.innerHTML = '';
   data.results.slice(0, 10).forEach(item => {
     const title = item.title || item.name;
-    const year = item.release_date?.split('-')[0] || item.first_air_date?.split('-')[0] || 'Desconocido';
+    const year = item.release_date?.split('-')[0] || item.first_air_date?.split('-')[0] || 'Unknow';
     const btn = document.createElement('button');
     btn.className = 'block w-full text-left p-2 bg-gray-700 hover:bg-gray-600 mb-2 rounded';
     btn.innerText = `${title} (${year})`;
@@ -71,7 +71,7 @@ async function loadDetails(type, id) {
       </div>
     </div>
     <div class="mt-6">
-      <h3 class="text-xl font-semibold mb-2">📸 Otras Imágenes</h3>
+      <h3 class="text-xl font-semibold mb-2">📸 Other Images</h3>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
         ${images.backdrops.slice(0, 64).map(img => `<img src="https://image.tmdb.org/t/p/w500${img.file_path}" class="rounded shadow"/>`).join('')}
       </div>
